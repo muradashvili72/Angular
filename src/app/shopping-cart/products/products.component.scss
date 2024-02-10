@@ -1,0 +1,16 @@
+.description {
+    width: 680px;
+    .status {
+        padding: 1px 7px;
+        border-radius: 8px;
+        margin-left: 10px;
+        span {
+            font-size: 10px;
+            color: white;
+        }
+    }
+}
+
+.card {
+    background-color: rgba(218, 210, 114, 0.682);
+}

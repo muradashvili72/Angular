@@ -1,0 +1,44 @@
+.todo-form {
+    max-width: 580px;
+    margin: auto;
+    background-color: rgba(218, 210, 114, 0.682);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+    background-color: rgba(218, 210, 114, 0.682);
+    margin-bottom: 5px;
+}
+
+.completed-todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+}
+
+.completed {
+    background-color: rgba(218, 210, 114, 0.682);
+}
+
+.container {
+    background-color: rgba(218, 210, 114, 0.682);
+}
+
+.head {
+    background-color: black;
+}
+
+.btn {
+    background-color: black;
+    color: aqua;
+}

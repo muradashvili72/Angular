@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="dashboard">
+        <div class="Card" style="width: 26rem;">
+            <img src="{{student.img}}" class="card-img-top" alt="User photo">
+            <div class="card-body">
+                <div class="developer">
+                    <h2 class="card-text1">Frontend Developer</h2>
+                </div>
+                <!-- <h5 class="card-title">{{student.name}}</h5> -->
+                <p class="card-text">Employed Status : {{student.employed ? 'Employed' : 'Open to work'}}</p>
+                <p class="card-text">Email : {{student.email}}</p>
+                <p class="card-text">Mobile : {{student.phone}}</p>
+                <p class="card-text">Salary : {{student.salary}}</p>
+                <p class="card-text">Country : {{student.country}}</p>
+                <button href="#" class="btn btn-primary"> Get data</button>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="user-action" style="width: 27rem;">
+            <span>Type Something:</span>
+            <div>
+                <input type="text" [(ngModel)]="userInputName">
+                <!-- <span>{{student.name}}</span> -->
+                <button (click)="SetUserName(userInputName)">Set Name</button>
+            </div>
+            <div>
+                <span>Is Employed:</span>
+                <input type="checkbox" [(ngModel)]="student.employed">
+            </div>
+            <div>
+                <span>select:</span>
+                <select [(ngModel)]="student.salary">
+                <option selected default> Select minimum salary</option>
+                <option value="1000">1000+</option>
+                <option value="2000">2000+</option>
+                <option value="3000">3k+</option>
+            </select>
+            </div>
+        </div>
+    </div>
+</div>

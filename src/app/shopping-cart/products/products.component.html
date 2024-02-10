@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of products">
+            <div class="card card-body mt-2">
+                <div class="d-flex align-items-center justify-content-between text-lg-left flex-column flex-lg-row">
+                    <div class="mr-2 mb-3 mb-lg-0">
+                        <img [src]="item.image" width="150" height="150" alt="">
+                    </div>
+                    <div class="ms-2 description">
+                        <div class="d-flex">
+                            <h6 class="">
+                                <a href="">{{item.title | titlecase}}</a>
+                            </h6>
+                            <div class="status" [ngStyle]="{'background-color' : item.inStock ? 'green' : 'red'}">
+                                <span class="">{{item.inStock ? 'Available' : 'Sold Out'}}</span>
+                            </div>
+                        </div>
+
+                        <p class="mb-3 description-text">{{item.description | truncateText : 300 }}</p>
+                    </div>
+                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                        <h3 class="mb-0 font-weight-semibold">{{item.price | currency}} </h3>
+                        <div>
+                            <app-rating-stars [maxNum]="4" (starRate)="getRating($event)"></app-rating-stars>
+                        </div>
+                        <div class="text-muted">{{item.rating.count}} Reviews</div>
+                        <ng-container [ngSwitch]="item.inStock">
+                            <button type="button" class="btn btn-warning mt-4 text-white" *ngSwitchCase="true">
+                                <i class="bi bi-cart-plus"></i>
+                                Add to cart
+                             </button>
+                            <span class="text-danger" *ngSwitchCase="false">! Sold Out</span>
+                        </ng-container>
+
+                    </div>
+                </div>
+
+            </div>
+        </ng-container>
+
+
+    </div>
+</div>
+
+<div class='container'>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://editorialist.com/wp-content/uploads/2020/11/Turtlenecks_4-600x900.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">One way to celebrate the transition from summer to fall? An all-white outfit. While we’ve debunked the antiquated idea that wearing white after Labor Day is a fashion faux-pas, there is still something especially festive about wearing
+                        monochromatic all-white outfits for women during the summer months–and with days left in August, the time is officially now.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/anna-rosa-vitiello-wears-white-and-orange-sunglasses-gold-news-photo-1672741379.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">It sounds obvious, but it's easy to forget what's sitting in our wardrobes – and, for many of us, there will be great pieces hidden away that haven't seen the light of day for years, or that will have been forgotten about during lockdown.
+                        So, before you go ahead and buy something new, make sure that you have a very clear idea of what is in your wardrobe already. If you have a clear-out and declutter, you will know what's in there and this will prevent you from accidentally
+                        buying things you don't need.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/screenshot-2024-01-31-at-9-27-19-pm-65bb0195e3679.png?crop=0.792xw:1.00xh;0.107xw,0&resize=360:*" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Take it from the street style scene, sometimes you just can’t beat the basics. And what is more basic than a crisp white button-up shirt? Style the closet classic with Ganni’s white denim maxi skirt and New Balance sneakers for a look
+                        that has the street style seal of approval. Accessorize with Khaite’s cream-colored shoulder bag, tortoiseshell sunnies from Kimeze, and Agmes’ silver earrings.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
