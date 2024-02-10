@@ -1,0 +1,18 @@
+.d-flex {
+    background-color: rgba(218, 210, 114, 0.682);
+}
+
+.nav-item {
+    border-radius: 20px;
+    margin-left: 5px;
+    &:hover {
+        background-color: #2196f352;
+    }
+}
+
+.active {
+    background-color: white;
+    a {
+        color: black;
+    }
+}
